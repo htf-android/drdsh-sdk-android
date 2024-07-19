@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="end"
+     android:padding="10dp">
+
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_weight="1"
+         android:gravity="end"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:fontFamily="@font/gilroy_regular"
+            android:textColor="@color/colorDark"
+            android:textSize="11sp"
+            tools:text="You" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:animateLayoutChanges="true"
+            android:background="@drawable/bg_outgoing_msg"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/tvOutgoingMsg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_gravity="end"
+                android:fontFamily="@font/gilroy_regular"
+                android:textColor="@color/colorDark"
+                android:textSize="12sp"
+                tools:text="this is the test message..." />
+
+
+            <com.htf.drdshsdklibrary.Utills.RoundedImage
+                android:id="@+id/ivOutgoingMsg"
+                android:layout_width="150dp"
+                android:background="@drawable/rounded"
+                android:layout_height="150dp"
+                android:layout_below="@+id/tvOutgoingMsg"
+                android:layout_marginTop="5dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/download"
+                android:visibility="gone"
+                tools:visibility="visible" />
+
+            <ProgressBar
+                android:id="@+id/pbOutGoingImage"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_centerInParent="true"
+                android:visibility="gone"
+                tools:visibility="visible" />
+
+
+            <ImageView
+                android:id="@+id/ivBtnPlaySender"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/ic_video_no_bg"
+                android:visibility="gone"
+                tools:visibility="visible" />
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ivOutgoingMsg"
+                android:layout_gravity="end">
+
+                <TextView
+                    android:id="@+id/tvOutgoingMsgTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/gilroy_regular"
+                    android:textColor="@color/colorTextTime"
+                    android:textSize="12sp"
+                    tools:text="21 minute ago" />
+
+                <ImageView
+                    android:id="@+id/ivSent"
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="3dp"
+                    android:src="@drawable/ic_clock" />
+
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+
+    <com.htf.drdshsdklibrary.Utills.CircularImage
+        android:id="@+id/ivUser"
+        android:scaleType="fitXY"
+        android:background="@drawable/circular"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/user"/>
+
+
+</LinearLayout>

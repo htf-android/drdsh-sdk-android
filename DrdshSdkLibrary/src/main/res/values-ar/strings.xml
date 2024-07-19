@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="noConnection">لا يوجد اتصال بالانترنت.</string>
+    <string name="turnOnInternet">يُرجى فتح اتصال الانترنت!!</string>
+    <string name="mobileData">بيانات الجوال</string>
+    <string name="wifi">WIFI</string>
+    <string name="server_error">يوجد مشاكل في الخادم. يُرجى المحاولة لاحقاً.</string>
+    <string name="chat">المحادثة</string>
+    <string name="close_chat">إغلاق المحادثة</string>
+    <string name="full_name">الاسم</string>
+    <string name="email_address">البريد الالكتروني</string>
+    <string name="mobile_number">رقم الجوال</string>
+    <string name="type_your_question_or_message">اكتب رسالتك</string>
+    <string name="start_chat">بدء المحادثة</string>
+    <string name="to_help_us_serve_you_better_please_provide_some_information_concerning_you_chat_experience">لمساعدتنا في خدمتك بشكل أفضل ، يرجى تقديم بعض المعلومات المتعلقة بتجربة الدردشة الخاصة بك.</string>
+    <string name="rate_your_chat_experience">قيم تجربتك</string>
+    <string name="send">إرسال</string>
+    <string name="please_input_your_email_address">يُرجى ادخال رقم الجوال</string>
+    <string name="close">إغلاق</string>
+    <string name="app_name">دردش</string>
+    <string name="drop_a_message">ارسال رسالة</string>
+    <string name="app_sid">معرف التطبيق</string>
+    <string name="name_required">الاسم مطلوب</string>
+    <string name="email_required">البريد الالكتروني مطلوب</string>
+    <string name="email_invalid">البريد الالكتروني غير صحيح</string>
+    <string name="mobile_required">رقم الجوال مطلوب</string>
+    <string name="subject_required">العنوان مطلوب</string>
+    <string name="mobile_invalid">رقم الجوال غير صحيح</string>
+    <string name="message_required">الرسالة مطلوبة</string>
+    <string name="restart_chat">بدء المحادثة مرة أخرى</string>
+    <string name="no_agent_available">لا يوجد موظفين متاحين الآن للرد على محادثتك. يُرجى ترك رسالة وسوف نقوم بالرد عن طريق البريد الإلكتروني.</string>
+    <string name="feedback_requied">خانة التعليقات مطلوبة</string>
+    <string name="email_id_requied">البريد الالكتروني مطلوب</string>
+    <string name="visitor_start_typing">[X] بدأ الكتابة...</string>
+    <string name="visitor_is_typing">[X] يكتب...</string>
+    <string name="visto_stop_typing">[X] توقف عن الكتابة...</string>
+    <string name="downloading">جاري التحميل</string>
+    <string name="select_photo">اختر الصورة</string>
+    <string name="visitor_waiting">شكرا لإنتظارك. مكالمتك مهمة بالنسبة لنا. يرجى الانتظار أو المحاولة مرة أخرى في غضون بضع دقائق.</string>
+    <string name="subject">العنوان</string>
+    <string name="pick_image_from">رفع الصورة عن طريق</string>
+    <string name="camera">الكاميرا</string>
+    <string name="gallery">المعرض</string>
+    <string name="please_choose_image">يُرجى اختيار صورة</string>
+    <string name="type_your_message">ادخل الرسالة</string>
+    <string name="failed">فشل</string>
+    <string name="max_file_size">يُسمح بالملفات بحجم 20MB فقط.</string>
+    <string name="email_transcription">ارسال الدردشة عبر البريد الالكتروني</string>
+    <string name="chat_transcripts_will_be_sent_to_this_email_address">سيتم ارسال الدردشة الى البريد الالكتروني المدخل</string>
+
+
+</resources>

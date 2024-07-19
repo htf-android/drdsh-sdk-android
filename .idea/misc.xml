@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="DrdshSdkLibrary/src/main/res/drawable/dialog_curve_bg.xml" value="0.1" />
+        <entry key="DrdshSdkLibrary/src/main/res/drawable/ic_back.xml" value="0.1" />
+        <entry key="DrdshSdkLibrary/src/main/res/drawable/ic_delivered.xml" value="0.1" />
+        <entry key="DrdshSdkLibrary/src/main/res/drawable/ic_google_docs.xml" value="0.1" />
+        <entry key="DrdshSdkLibrary/src/main/res/drawable/ic_seen.xml" value="0.1" />
+        <entry key="DrdshSdkLibrary/src/main/res/drawable/ic_send.xml" value="0.1" />
+        <entry key="DrdshSdkLibrary/src/main/res/drawable/ic_tick.xml" value="0.1" />
+        <entry key="DrdshSdkLibrary/src/main/res/drawable/ic_video_no_bg.xml" value="0.1" />
+        <entry key="DrdshSdkLibrary/src/main/res/layout/activity_chat.xml" value="0.2" />
+        <entry key="DrdshSdkLibrary/src/main/res/layout/dialog_email.xml" value="0.3453125" />
+        <entry key="DrdshSdkLibrary/src/main/res/layout/dialog_rate.xml" value="0.34549244398124024" />
+        <entry key="DrdshSdkLibrary/src/main/res/layout/popup_photo_full.xml" value="0.18125" />
+        <entry key="DrdshSdkLibrary/src/main/res/layout/row_incoming_msg.xml" value="0.25" />
+        <entry key="DrdshSdkLibrary/src/main/res/layout/row_info_msg.xml" value="0.18125" />
+        <entry key="DrdshSdkLibrary/src/main/res/layout/row_outgoing_msg.xml" value="0.375" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

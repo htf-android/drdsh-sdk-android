@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:animateLayoutChanges="true"
+    android:padding="10dp">
+
+
+    <com.htf.drdshsdklibrary.Utills.CircularImage
+        android:id="@+id/ivAgent"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/circular"
+        android:scaleType="fitXY"
+        android:src="@drawable/user"
+        android:visibility="visible" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:animateLayoutChanges="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="40dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvAgentName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/gilroy_regular"
+            android:textColor="@color/colorDark"
+            android:textSize="11sp"
+            tools:text="Agent Name" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:animateLayoutChanges="true"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/bg_incoming_msg"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvIncomingMsg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/gilroy_regular"
+                android:textColor="@color/colorWhite"
+                android:textSize="12sp"
+                tools:text="this is the test message...." />
+
+            <RelativeLayout
+                android:id="@+id/rlIncomingImage"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_marginTop="5dp"
+                android:animateLayoutChanges="true"
+                android:visibility="gone"
+                tools:visibility="visible">
+
+                <com.htf.drdshsdklibrary.Utills.RoundedImage
+                    android:id="@+id/ivIncomingImage"
+                    android:background="@drawable/rounded"
+                    android:layout_width="150dp"
+                    android:scaleType="centerCrop"
+                    android:layout_height="150dp" />
+
+                <RelativeLayout
+                    android:id="@+id/rlIncomingImageTransparent"
+                    android:layout_width="match_parent"
+                    android:animateLayoutChanges="true"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bg_transparent_msg_image">
+
+                    <ProgressBar
+                        android:id="@+id/pbIncomingImage"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_centerInParent="true"
+                        android:visibility="gone"
+                        tools:visibility="visible" />
+
+                    <ImageView
+                        android:id="@+id/ivIncomingImageDownload"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/ic_download" />
+
+
+                </RelativeLayout>
+
+                <ImageView
+                    android:id="@+id/ivBtnPlay"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/ic_video_no_bg"
+                    android:visibility="gone" />
+
+            </RelativeLayout>
+
+
+            <TextView
+                android:id="@+id/tvIncomingMsgTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:fontFamily="@font/gilroy_regular"
+                android:textColor="@color/colorTextTime"
+                android:textSize="12sp"
+                tools:text="26 minute ago" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>
