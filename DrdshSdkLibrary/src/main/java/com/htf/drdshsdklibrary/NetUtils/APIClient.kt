@@ -9,6 +9,8 @@ import androidx.fragment.app.Fragment
 import com.htf.drdshsdklibrary.R
 import com.htf.drdshsdklibrary.Utills.AppUtils
 import com.htf.drdshsdklibrary.Utills.Constants
+import com.htf.drdshsdklibrary.Utills.MyApplication
+import com.htf.drdshsdklibrary.Utills.URLManager
 
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
@@ -23,39 +25,33 @@ import java.util.concurrent.TimeUnit
 
 class APIClient {
 
+
     companion object {
         var isRefreshingToken = false
-        fun getClient(): ApiInterface {
 
+        fun getClient(): ApiInterface {
             val logging = HttpLoggingInterceptor()
                 .setLevel(HttpLoggingInterceptor.Level.HEADERS)
                 .setLevel(HttpLoggingInterceptor.Level.BODY)
-
-
             val okHttpClient = OkHttpClient().newBuilder()
                 .addInterceptor(logging)
                 .addInterceptor { chain ->
                     val originalRequest = chain.request()
                     val builder = originalRequest.newBuilder()
                         .header("X-Requested-With", "XMLHttpRequest")
-
-
                     val newRequest = builder.build()
-
                     chain.proceed(newRequest)
                 }
                 .connectTimeout(60, TimeUnit.SECONDS)
                 .readTimeout(60, TimeUnit.SECONDS)
                 .writeTimeout(60, TimeUnit.SECONDS)
                 .build()
-
             val retrofit = Retrofit.Builder()
                 .baseUrl(Constants.API_URL)
                 .addConverterFactory(ScalarsConverterFactory.create())
                 .addConverterFactory(GsonConverterFactory.create())
                 .client(okHttpClient)
                 .build()
-
             return retrofit.create(ApiInterface::class.java)
         }
 

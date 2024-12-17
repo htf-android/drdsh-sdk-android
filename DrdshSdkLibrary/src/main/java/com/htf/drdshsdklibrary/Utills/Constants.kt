@@ -3,20 +3,23 @@ package com.htf.drdshsdklibrary.Utills
 object Constants {
 
     /*http://dev.drdsh.live/admin/logs?locale=en*/
-    const val BASE_URL="https://www.drdsh.live"
+    val urlManager = URLManager(MyApplication.getAppContext())
+
+ //   val BASE_URL=urlManager.getBaseUrl()
+    val BASE_URL = "https://${urlManager.getBaseUrl()}"
 
 //    const val BASE_URL="http://dev.drdsh.live"
-    const val API_URL="${BASE_URL}/sdk/v1/"
+    val API_URL="${BASE_URL}/sdk/v1/"
     const val TYPE_DISLIKE=1
     const val TYPE_LIKE=2
 
-    const val ATTACHMENT_URL="$BASE_URL/uploads/m/"
-    const val ATTACHMENT_MESSAGE_URL="$BASE_URL/uploads/messenger-image/"
+    val ATTACHMENT_URL="$BASE_URL/uploads/m/"
+    val ATTACHMENT_MESSAGE_URL="$BASE_URL/uploads/messenger-image/"
 
 
     const val KEY_PREF_USER_LANGUAGE="language"
 
-    const val AGENT_IMAGE_URL="${BASE_URL}/uploads/images/"
+    val AGENT_IMAGE_URL="${BASE_URL}/uploads/images/"
 
     const val IS_AGENT_ONLINE=1
     const val IS_AGENT_OFFLINE=0

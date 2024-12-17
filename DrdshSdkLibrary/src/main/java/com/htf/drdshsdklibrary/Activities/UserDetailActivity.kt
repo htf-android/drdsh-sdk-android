@@ -36,6 +36,7 @@ import com.htf.drdshsdklibrary.Utills.Constants.IS_AGENT_OFFLINE
 import com.htf.drdshsdklibrary.Utills.Constants.IS_AGENT_ONLINE
 import com.htf.drdshsdklibrary.Utills.LocalizeActivity
 import com.htf.drdshsdklibrary.Utills.RegExp
+import com.htf.drdshsdklibrary.Utills.URLManager
 import com.htf.learnchinese.utils.AppPreferences
 import com.htf.learnchinese.utils.AppSession
 import com.htf.learnchinese.utils.AppSession.Companion.mSocket
@@ -67,7 +68,6 @@ class UserDetailActivity : LocalizeActivity(), View.OnClickListener {
     private var vistorId: String? = null
     private var verifyIdentityResponse: VerifyIdentity? = null
 
-
     companion object {
         fun open(
             currActivity: Activity,
@@ -91,6 +91,7 @@ class UserDetailActivity : LocalizeActivity(), View.OnClickListener {
         setContentView(R.layout.activity_user_detail)
         setListener()
         getExtra()
+
         tvCloseChat.visibility = View.GONE
         val pm = getSystemService(Context.POWER_SERVICE) as PowerManager
         this.mWakeLock = pm.newWakeLock(PowerManager.SCREEN_DIM_WAKE_LOCK, "My Tag")
@@ -106,6 +107,14 @@ class UserDetailActivity : LocalizeActivity(), View.OnClickListener {
         domain = intent.getStringExtra("domain")!!
         deviceId = intent.getStringExtra("deviceId")!!
         AppSession.appSid = appSid
+
+        val urlManager = URLManager(this)
+        if (domain=="drdshlive.com"){
+            urlManager.setBaseUrl(domain)
+        }else{
+            urlManager.setBaseUrl("www.drdsh.live")
+        }
+
         callVerifyIdentity()
     }
 
