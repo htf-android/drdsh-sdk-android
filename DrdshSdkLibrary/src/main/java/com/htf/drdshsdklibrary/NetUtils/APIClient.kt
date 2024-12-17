@@ -9,7 +9,6 @@ import androidx.fragment.app.Fragment
 import com.htf.drdshsdklibrary.R
 import com.htf.drdshsdklibrary.Utills.AppUtils
 import com.htf.drdshsdklibrary.Utills.Constants
-import com.htf.drdshsdklibrary.Utills.MyApplication
 import com.htf.drdshsdklibrary.Utills.URLManager
 
 import okhttp3.OkHttpClient

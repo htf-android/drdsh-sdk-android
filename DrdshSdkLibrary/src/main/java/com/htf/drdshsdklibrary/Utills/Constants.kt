@@ -3,7 +3,7 @@ package com.htf.drdshsdklibrary.Utills
 object Constants {
 
     /*http://dev.drdsh.live/admin/logs?locale=en*/
-    val urlManager = URLManager(MyApplication.getAppContext())
+    val urlManager = URLManager(AppContextProvider.getContext())
 
  //   val BASE_URL=urlManager.getBaseUrl()
     val BASE_URL = "https://${urlManager.getBaseUrl()}"

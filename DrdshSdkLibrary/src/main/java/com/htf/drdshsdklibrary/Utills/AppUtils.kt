@@ -564,7 +564,7 @@ object AppUtils {
         var mimeType: String? = null
         val uri = Uri.fromFile(file)
         mimeType = if (uri?.scheme.equals(ContentResolver.SCHEME_CONTENT)) {
-            val cr: ContentResolver = MyApplication.getAppContext().contentResolver
+            val cr: ContentResolver = AppContextProvider.getContext().contentResolver
             cr.getType(uri!!)
         } else {
             val fileExtension = MimeTypeMap.getFileExtensionFromUrl(

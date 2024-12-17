@@ -29,6 +29,7 @@ import com.htf.drdshsdklibrary.Models.VerifyIdentity
 import com.htf.drdshsdklibrary.NetUtils.APIClient
 import com.htf.drdshsdklibrary.NetUtils.RetrofitResponse
 import com.htf.drdshsdklibrary.R
+import com.htf.drdshsdklibrary.Utills.AppContextProvider
 import com.htf.drdshsdklibrary.Utills.AppUtils
 import com.htf.drdshsdklibrary.Utills.Constants
 import com.htf.drdshsdklibrary.Utills.Constants.ACTION_AGENT_ACCEPT_CHAT_REQUEST
@@ -88,6 +89,7 @@ class UserDetailActivity : LocalizeActivity(), View.OnClickListener {
     @SuppressLint("HardwareIds", "InvalidWakeLockTag")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        AppContextProvider.initialize(applicationContext)
         setContentView(R.layout.activity_user_detail)
         setListener()
         getExtra()
