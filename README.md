@@ -21,7 +21,7 @@ allprojects {
 ###  Add the dependency
 ```
 dependencies {
-      implementation 'com.github.htf-app:drdsh-sdk-android:v1.0.12'
+      implementation 'com.github.htf-app:drdsh-sdk-android:v1.0.13'
 }
 ```
 
