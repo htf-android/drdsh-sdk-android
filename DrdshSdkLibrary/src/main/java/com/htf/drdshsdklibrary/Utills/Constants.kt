@@ -2,13 +2,10 @@ package com.htf.drdshsdklibrary.Utills
 
 object Constants {
 
-    /*http://dev.drdsh.live/admin/logs?locale=en*/
+
     val urlManager = URLManager(AppContextProvider.getContext())
+     val BASE_URL = "https://${urlManager.getBaseUrl()}"
 
- //   val BASE_URL=urlManager.getBaseUrl()
-    val BASE_URL = "https://${urlManager.getBaseUrl()}"
-
-//    const val BASE_URL="http://dev.drdsh.live"
     val API_URL="${BASE_URL}/sdk/v1/"
     const val TYPE_DISLIKE=1
     const val TYPE_LIKE=2

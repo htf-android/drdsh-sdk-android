@@ -233,16 +233,11 @@ class UserDetailActivity : LocalizeActivity(), View.OnClickListener {
                 opts.forceNew = true
                 opts.path = "/dc/socket-connect/io/socket.io"
                 //opts.query="socket=connect&acid=${verifyIdentity?.accountID}&vid=${verifyIdentity?.visitorID}&device=${AppSession.deviceType}&locale=$locale"
-                mSocket = IO.socket("https://www.drdsh.live", opts)
+                val urlManager = URLManager(AppContextProvider.getContext())
+                val baseUrl = "https://${urlManager.getBaseUrl()}"
+                mSocket = IO.socket(baseUrl, opts)
                 mSocket!!.io().reconnection(false)
             }
-
-
-            /* if(mSocket==null){
-                 mSocket = IO.socket("https://www.drdsh.live/")
-                 mSocket!!.io().reconnection(false)
-             }*/
-
 
             if (mSocket != null) {
                 if (!mSocket!!.connected()) {

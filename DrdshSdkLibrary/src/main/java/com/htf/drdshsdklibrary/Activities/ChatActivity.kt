@@ -47,6 +47,7 @@ import com.htf.drdshsdklibrary.Adapter.ChatAdapter
 import com.htf.drdshsdklibrary.BuildConfig
 import com.htf.drdshsdklibrary.Models.*
 import com.htf.drdshsdklibrary.R
+import com.htf.drdshsdklibrary.Utills.AppContextProvider
 import com.htf.drdshsdklibrary.Utills.AppUtils
 import com.htf.drdshsdklibrary.Utills.AppUtils.getFileSize
 import com.htf.drdshsdklibrary.Utills.AppUtils.getMimeType
@@ -60,6 +61,7 @@ import com.htf.drdshsdklibrary.Utills.FileCompression.IImageCompressTaskListener
 import com.htf.drdshsdklibrary.Utills.FileCompression.ImageCompressTask
 import com.htf.drdshsdklibrary.Utills.LocalizeActivity
 import com.htf.drdshsdklibrary.Utills.RegExp
+import com.htf.drdshsdklibrary.Utills.URLManager
 import com.htf.learnchinese.utils.AppPreferences
 import com.htf.learnchinese.utils.AppSession
 import com.htf.learnchinese.utils.AppSession.Companion.mSocket
@@ -268,7 +270,9 @@ class ChatActivity : LocalizeActivity(), View.OnClickListener {
     private fun socketConnecting() {
         try {
             if (mSocket == null) {
-                mSocket = IO.socket("https://www.drdsh.live/")
+                val urlManager = URLManager(AppContextProvider.getContext())
+                val baseUrl = "https://${urlManager.getBaseUrl()}"
+                mSocket = IO.socket("$baseUrl/")
                 mSocket?.io()?.reconnection(false)
             }
 
